@@ -36,8 +36,9 @@ class TestRectangle():
     def setup_method(self):
         options = ChromeOptions()
         options.add_experimental_option('detach', True)
-        self.browser = webdriver.Chrome(options=options)
         options.add_argument('--headless')
+        self.browser = webdriver.Chrome(options=options)
+
         self.browser.get(TestRectangle.PATH)
         self.browser.set_window_size(1024, 800)
 
