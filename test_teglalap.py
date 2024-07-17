@@ -37,6 +37,7 @@ class TestRectangle():
         options = ChromeOptions()
         options.add_experimental_option('detach', True)
         self.browser = webdriver.Chrome(options=options)
+        options.add_argument('--headless')
         self.browser.get(TestRectangle.PATH)
         self.browser.maximize_window()
 
